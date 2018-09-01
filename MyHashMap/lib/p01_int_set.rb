@@ -74,11 +74,8 @@ class ResizingIntSet
     if @count == num_buckets
       self[num] << num unless self.include?(num)
       @count += 1
-      # num_buckets = num_buckets * 2 unless num_buckets.nil? 
       @store = resize! 
     end
-    
-    # @store = resize!
     
     unless self.include?(num)
       self[num] << num 
